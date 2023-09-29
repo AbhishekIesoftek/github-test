@@ -1,0 +1,33 @@
+solace-connector-mapper:
+    mapper-metadata:
+        source-schema-type: json
+        target-schema-type: sourcetable
+        encrypted: null
+        source-schema-name: MessageLoad
+        target-schema-name: sourcetable
+    payload-mapper:
+        mapper-id:
+            source-xpath: MessageLoad/id
+            source-datatype: NUMBER
+            target-xpath: MESSAGE_LOAD/ID
+            target-datatype: NUMBER
+        mapper-load:
+            source-xpath: MessageLoad/load
+            source-datatype: BLOB
+            target-xpath: MESSAGE_LOAD/LOAD
+            target-datatype: BLOB
+        mapper-trackingId:
+            source-xpath: MessageLoad/trackingId
+            source-datatype: VARCHAR2
+            target-xpath: MESSAGE_LOAD/TRACKING_ID
+            target-datatype: VARCHAR2
+        mapper-readTime:
+            source-xpath: MessageLoad/readTime
+            source-datatype: DATE
+            target-xpath: MESSAGE_LOAD/READ_TIME
+            target-datatype: DATE
+        mapper-flag:
+            source-xpath: MessageLoad/flag
+            source-datatype: VARCHAR2
+            target-xpath: MESSAGE_LOAD/FLAG
+            target-datatype: VARCHAR2
